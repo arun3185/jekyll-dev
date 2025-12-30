@@ -1,0 +1,27 @@
+services:
+
+  jekyll-service:
+#    image: jekyll/jekyll:4
+    build: .
+    container_name: jekyll_dev
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    volumes:
+      - ./docs:/srv/jekyll
+      - jekyll_bundle:/usr/local/bundle
+    environment:
+      JEKYLL_ENV: development
+    command: >
+      bundle exec jekyll serve
+      --host 0.0.0.0
+      --port 4000
+      --livereload
+      --force_polling
+      --watch
+      --source /srv/jekyll
+      --destination /srv/jekyll/_site
+#      --incremental false
+
+volumes:
+  jekyll_bundle:
