@@ -1,0 +1,53 @@
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | relative_url }}">
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>{{ page.title | default: site.title }}</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 class="header">{{ site.title }}</h1>
+            <p class="header">{{ site.description }}</p>
+            <style type="text/css">
+                .nav-button
+                {
+                    -webkit-font-smoothing: antialiased;
+                    font-weight: normal;
+                    text-shadow: rgba(0,0,0,0.4) 0 -1px 0;
+                    padding: 2px 2px 2px 2px;
+                    text-align: center;
+                }
+
+                    .nav-button:hover
+                    {
+                        color: #fff;
+                        text-decoration: none
+                    }
+            </style>
+
+            <ul>
+                {% for item in site.data.navigation %}
+                <li><a href="{{ item.link }}" class="nav-button">{{ item.name }}</a></li>
+                {% endfor %}
+            </ul>
+
+        </header>
+
+        <section>
+            {{ content }}
+        </section>
+
+        <footer>
+            <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+        </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+</body>
+</html>

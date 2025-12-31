@@ -1,0 +1,50 @@
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | relative_url }}">
+    <title>{{ page.title | default: site.title }}</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+            <h1 id="project_title">{{ site.title }}</h1>
+            <h2 id="project_tagline">{{ site.description }}</h2>
+            <!-- <section id="downloads"></section> -->
+            <style type="text/css">
+                .base-nav-list li
+                {
+                    background-color: #0090ff;
+                }
+
+                    .base-nav-list li a
+                    {
+                        color: #fff;
+                    }
+            </style>
+            <section class="base-nav-list" style="float: right;">
+                <ul>
+                    {% for item in site.data.navigation %}
+                    <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </header>
+    </div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+        <section id="main_content" class="inner">
+            {{ content }}
+        </section>
+    </div>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+        <footer class="inner">
+            <p class="copyright">{{ site.title }}</p>
+            <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+        </footer>
+    </div>
+</body>
+</html>

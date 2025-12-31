@@ -12,6 +12,7 @@ services:
       - jekyll_bundle:/usr/local/bundle
     environment:
       JEKYLL_ENV: development
+      PAGES_REPO_NWO: arun3185/jekyll-dev
     command: >
       bundle exec jekyll serve
       --host 0.0.0.0

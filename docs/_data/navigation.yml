@@ -1,0 +1,8 @@
+- name: Home
+  link: /
+- name: Animals
+  link: /demo/animals
+- name: Tech
+  link: /demo/tech
+- name: Under Construction
+  link: /demo/UnderConstruction

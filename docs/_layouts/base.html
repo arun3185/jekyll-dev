@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{%- if site.override_jekyll_theme == true -%}
+{%- include base_pico.html -%}
+
+{%- elsif site.theme contains 'architect' -%}
+{%- include jekyll-theme/architect/default.html -%}
+
+{%- elsif site.theme contains 'cayman' -%}
+{%- include jekyll-theme/cayman/default.html -%}
+
+{%- elsif site.theme contains 'dinky' -%}
+{%- include jekyll-theme/dinky/default.html -%}
+
+{%- elsif site.theme contains 'hacker' -%}
+{%- include jekyll-theme/hacker/default.html -%}
+
+{%- elsif site.theme contains 'leap-day' -%}
+{%- include jekyll-theme/leap-day/default.html -%}
+
+{%- elsif site.theme contains 'merlot' -%}
+{%- include jekyll-theme/merlot/default.html -%}
+
+{%- elsif site.theme contains 'midnight' -%}
+{%- include jekyll-theme/midnight/default.html -%}
+
+{%- elsif site.theme contains 'minimal' -%}
+{%- include jekyll-theme/minimal/default.html -%}
+
+{%- elsif site.theme contains 'modernist' -%}
+{%- include jekyll-theme/modernist/default.html -%}
+
+{%- elsif site.theme contains 'primer' -%}
+{%- include jekyll-theme/primer/default.html -%}
+
+{%- elsif site.theme contains 'slate' -%}
+{%- include jekyll-theme/slate/default.html -%}
+
+{%- elsif site.theme contains 'tactile' -%}
+{%- include jekyll-theme/tactile/default.html -%}
+
+{%- elsif site.theme contains 'time-machine' -%}
+{%- include jekyll-theme/time-machine/default.html -%}
+
+{%- elsif site.theme contains 'minima' -%}
+{%- include jekyll-theme/minima/base.html -%}
+
+{%- else -%}
+{%- include base_pico.html -%}
+{%- endif -%}

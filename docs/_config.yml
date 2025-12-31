@@ -1,0 +1,26 @@
+title: Jekyll Dev
+description: dev-test
+
+override_jekyll_theme: true
+
+theme: minima
+#theme: jekyll-theme-architect
+#theme: jekyll-theme-cayman
+#theme: jekyll-theme-dinky
+#theme: jekyll-theme-hacker
+#theme: jekyll-theme-leap-day
+#theme: jekyll-theme-merlot
+#theme: jekyll-theme-midnight
+#theme: jekyll-theme-minimal
+#theme: jekyll-theme-modernist
+#theme: jekyll-theme-primer
+#theme: jekyll-theme-slate
+#theme: jekyll-theme-tactile
+#theme: jekyll-theme-time-machine
+
+sass:
+  style: compressed
+
+# Optional but useful tweaks. Silence future Jekyll warnings.
+future: false
+strict_front_matter: true

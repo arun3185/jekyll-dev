@@ -1,0 +1,168 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>{{ site.title }}</title>
+
+    <style type="text/css">
+        *
+        {
+            box-sizing: border-box;
+        }
+
+        header
+        {
+            background-size: cover;
+            background-image: url(https://ssl.gstatic.com/atari/images/simple-header-blended-small.png);
+            background-color: var(--pico-contrast-inverse);
+        }
+
+            header hgroup
+            {
+                padding: 50px;
+                text-align: center;
+                height: 200px;
+            }
+
+        footer
+        {
+            text-align: center;
+            padding: 8px;
+        }
+
+        .blankElement
+        {
+            height: 40px;
+        }
+
+        .base-nav-list
+        {
+            list-style-type: none;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            padding-inline-start: 0px;
+        }
+
+            .base-nav-list li
+            {
+                float: left;
+                display: block;
+                text-align: left;
+                padding: 14px 16px;
+                margin: 2px;
+            }
+
+        @media screen and (max-width: 576px)
+        {
+            .base-nav-list li
+            {
+                float: none;
+            }
+        }
+
+        @media screen and (max-width: 768px)
+        {
+            .dropdown summary
+            {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 1024px)
+        {
+        }
+
+        @media screen and (max-width: 1280px)
+        {
+        }
+
+        @media screen and (max-width: 1536px)
+        {
+        }
+    </style>
+
+    <!-- Pico.css -->
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.min.css">
+    <!--
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.conditional.min.css">
+    -->
+
+</head>
+<body>
+
+    <header class="container">
+        <hgroup>
+            <h1>{{ site.title }}</h1>
+        </hgroup>
+    </header>
+    <div class="blankElement"></div>
+
+    <div class="container">
+        <details class="dropdown" style="width: 150px;">
+            <summary role="button" class="secondary">Theme</summary>
+            <ul>
+                <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+                <li><a href="#" data-theme-switcher="light">Light</a></li>
+                <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+            </ul>
+        </details>
+    </div>
+
+    <nav class="container">
+        <ul class="base-nav-list">
+            {% for item in site.data.navigation %}
+            <li>
+                <a href="{{ item.link | relative_url }}">{{ item.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div>
+            {{ content }}
+        </div>
+    </main>
+
+    <footer class="container">
+        <small style="display: block; text-align: center;">
+            <span>Footer content</span>
+        </small>
+    </footer>
+
+    <!-- Pico Minimal theme switcher and Modal -->
+    <script src="{{ '/assets/js/minimal-theme-switcher.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/modal.js' | relative_url }}"></script>
+
+</body>
+</html>
+
+<!---->
+<!--
+/assets/images/abstract/a-cluster-of-curling-pink-silver-and-white-like-ink-in-water.jpg
+/assets/images/abstract/abstract-image-of-colored-paper-creating-horizontal-lines.jpg
+/assets/images/abstract/abstract-purple-light-shapes.jpg
+/assets/images/abstract/blue-red-pink-and-yellow-paper-fanned-out.jpg
+/assets/images/abstract/orange-ink-galaxy.jpg
+
+/assets/images/animals/a-smiling-big-teddy-bear-like-dog.jpg
+/assets/images/animals/business-pug-working-on-laptop.jpg
+/assets/images/animals/couple-rides-horseback-on-a-sunset-beach.jpg
+/assets/images/animals/happy-dog-runs-on-a-green-grassy-trail.jpg
+/assets/images/animals/person-silhouetted-on-a-horse-in-a-open-field.jpg
+
+/assets/images/nature/layered-plant-leaves-iphone-wallpaper.jpg
+/assets/images/nature/long-forest-path.jpg
+/assets/images/nature/person-walks-their-dog-on-a-tree-lined-pathway.jpg
+/assets/images/nature/tall-trees-in-autumn.jpg
+
+/assets/images/tech/close-up-of-motherboard.jpg
+/assets/images/tech/coding-on-laptop.jpg
+/assets/images/tech/finger-pointing-at-javascript-code.jpg
+/assets/images/tech/laptop-in-empty-room.jpg
+/assets/images/tech/programmer-focused-on-code.jpg
+/assets/images/tech/server-room-cables.jpg
+/assets/images/tech/software-programming-plan.jpg
+/assets/images/tech/working-at-night.jpg
+-->
+<!-- -->
